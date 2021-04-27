@@ -1,0 +1,154 @@
+#readMore {
+  float: right;
+  margin-bottom: 30px;
+}
+.panel-image-card img {
+  border-radius: 10px;
+  padding: 0 1%;
+  max-height: 64px;
+  width: auto;
+}
+.card-time {
+  color: #6a6a7a !important;
+}
+.baloon-time {
+  display: none;
+  /* position: absolute;
+    top: -70%;
+    width: 160px;
+    text-align: center;
+    color: #000; */
+}
+.baloon_svg {
+  height: 100vh;
+}
+#map2 div {
+  box-sizing: border-box;
+}
+.baloon {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(../images/baloon.svg); /* MAIN IMAGE OF NEWS */
+  width: 35px;
+  height: 50px;
+  position: absolute;
+
+  transform: translate(-50%, -100%);
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+.baloon-desc {
+  display: none;
+  height: 100%;
+  margin-left: 40px;
+  width: 230px;
+  border-radius: 40px;
+  position: relative;
+}
+
+.baloon-text {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: #6a6a7a;
+  padding-right: 24px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -100%);
+  }
+  50% {
+    transform: translate(-50%, -135%);
+  }
+  100% {
+    transform: translate(-50%, -100%);
+  }
+}
+#news_panel {
+  height: 100vh;
+
+  overflow-y: scroll;
+}
+.card {
+  display: none;
+  margin-bottom: 15px;
+}
+
+.btn.btn-primary {
+  margin-top: 15px;
+}
+.card-header:hover {
+  cursor: pointer;
+}
+.card-header {
+  position: relative;
+  color: #fff;
+}
+.card-close {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  opacity: 0.6;
+  right: 5px;
+  top: 5px;
+}
+.card-close:hover {
+  opacity: 1;
+}
+.card-close:before,
+.card-close:after {
+  position: absolute;
+  left: 18px;
+  content: " ";
+  height: 25px;
+  width: 2px;
+  background-color: #fff;
+  color: #fff;
+}
+.card-close:before {
+  transform: rotate(45deg);
+}
+.card-close:after {
+  transform: rotate(-45deg);
+}
+.baloon_svg {
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .baloon {
+    width: 20px;
+    height: 28.5px;
+  }
+  .baloon-desc {
+    margin-left: 23px;
+    width: 150px;
+    height: 100%;
+  }
+  .baloon-text {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .baloon {
+    width: 20px;
+    height: 28.5px;
+  }
+  .baloon-desc {
+    margin-left: 23px;
+    width: 125px;
+    height: 90%;
+  }
+  .baloon-text {
+    font-size: 10px;
+  }
+}
